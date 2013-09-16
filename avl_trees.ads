@@ -9,7 +9,7 @@ with Ada.Unchecked_Deallocation;
 generic
    type Key_Type is private;
    type Item_Type is private;
-   with function "<"(a, b : Key_Type) return boolean is <>;
+   with function "<"(a, b : Key_Type) return Boolean is <>;
 package AVL_Trees is
 
    type AVL_Tree is new Limited_Controlled with private;
@@ -25,13 +25,13 @@ package AVL_Trees is
                 key  : Key_Type) return Item_Type;
 
    function Exists(tree : AVL_Tree;
-                   key  : Key_Type) return boolean;
+                   key  : Key_Type) return Boolean;
 
    Not_Found : exception;
 
 private
 
-   type Balance_Type is new integer;
+   type Balance_Type is new Integer;
 
    type Node;
    type Node_Pointer is access Node;

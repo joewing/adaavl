@@ -58,7 +58,7 @@ package body AVL_Trees is
    -- Check if an item exists
    ------------------------------------------------------------------
    function Exists(tree : AVL_Tree;
-                   key  : Key_Type) return boolean is
+                   key  : Key_Type) return Boolean is
       np : constant Node_Pointer := Find_Item(tree, key);
    begin
       return np /= null;
